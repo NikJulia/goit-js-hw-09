@@ -16,3 +16,26 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.switcher-btn {
+  display: inline-block;
+  margin: 15px;
+  height: 60px;
+  width: 100px;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.switcher-btn:disabled {
+  background-color: rgba(209, 209, 209, 60%);
+}
