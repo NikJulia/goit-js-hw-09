@@ -46,8 +46,11 @@ const options = {
         this.intervalId = setInterval(() => {
             const startTime = Date.now();
             const deltaTime = endTime - startTime;
-            const { days, hours, minutes, seconds } = convertMs(deltaTime);
-            // console.log(`${days}:${hours}:${minutes}:${seconds}`);
+            console.log(deltaTime);
+            if(deltaTime < 0) {
+              clearInterval(this.intervalId);
+              return;
+            }
             const time = convertMs(deltaTime);
 
             updateClockFace(time);
